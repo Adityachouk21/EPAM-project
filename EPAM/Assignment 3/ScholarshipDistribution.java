@@ -16,7 +16,6 @@ public class ScholarshipDistribution {
                 scholarship[i] = sc.nextInt();
             }
 
-            // Sort in increasing order
             Arrays.sort(scholarship);
 
             long total = 0;
