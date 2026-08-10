@@ -43,5 +43,6 @@ public class TreeOfTrustedServer {
                 dfs(v,u,pathXorAtU);
             }
         }
+        sc.close();
     }
 }
