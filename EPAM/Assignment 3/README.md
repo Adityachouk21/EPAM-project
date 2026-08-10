@@ -1,57 +1,92 @@
-Assignment 3
+# Assignment 3 - Greedy & Dynamic Programming
 
-Medium Level Problem Statements - Greedy & Dynamic Programming
-Problem 1: Scholarship Distribution (Greedy)
-A college has received a limited number of scholarships for students who participated in a coding competition. Every student has a minimum scholarship amount they are willing to accept. The college wants to award scholarships to as many students as possible without exceeding the available budget.
+## Overview
+This folder contains two algorithm problems and their Java solutions.
 
-Each student can receive at most one scholarship, and the college can decide the order in which scholarships are awarded. Your task is to determine the maximum number of students who can receive scholarships while staying within the total budget.
-Input Format
-• First line: N B (number of students and total budget)
-• Second line: N integers representing the minimum scholarship required by each student.
-Output Format
-Print the maximum number of students who can receive scholarships.
-Constraints
-1 ≤ N ≤ 100000
-1 ≤ B ≤ 10^9
-1 ≤ Scholarship ≤ 10^6
-Sample Input
+- `ScholarshipDistribution.java` solves the Scholarship Distribution problem using a greedy approach.
+- `MaximumLearningPoints.java` solves the Maximum Learning Points problem using a simple dynamic programming approach.
+
+## Problem 1: Scholarship Distribution (Greedy)
+
+### Description
+A college has a limited scholarship budget. Each student has a minimum scholarship amount they will accept.
+
+The college wants to award scholarships to as many students as possible without exceeding the total budget. Each student can receive at most one scholarship.
+
+### Input Format
+- First line: `N B` (number of students and total budget)
+- Second line: `N` integers representing the minimum scholarship required by each student.
+
+### Output Format
+- Print the maximum number of students who can receive scholarships.
+
+### Constraints
+- `1 ≤ N ≤ 100000`
+- `1 ≤ B ≤ 10^9`
+- `1 ≤ Scholarship ≤ 10^6`
+
+### Example
+Input:
+```
 5 20
 4 8 2 6 5
-Sample Output
-4
-Explanation
-Sort the scholarship requirements in increasing order and award scholarships starting from the smallest amount. Students requiring 2, 4, 5, and 6 can be selected within the budget of 20.
-Example
-Input:
-4 10
-3 5 7 2
-
+```
 Output:
-3
+```
+4
+```
 
-Problem 2: Maximum Learning Points (Dynamic Programming)
-A student is preparing for a programming contest. Every day, the student can solve one topic, and each topic provides a certain number of learning points. However, the student cannot solve two consecutive difficult topics because of fatigue.
+### Solution
+- `ScholarshipDistribution.java`
 
-Given the learning points of each topic arranged in order, determine the maximum learning points the student can earn without selecting two consecutive topics.
-Input Format
-• First line: N (number of topics)
-• Second line: N integers representing learning points.
-Output Format
-Print the maximum learning points.
-Constraints
-1 ≤ N ≤ 100000
-1 ≤ Points ≤ 10000
-Sample Input
+---
+
+## Problem 2: Maximum Learning Points (Dynamic Programming)
+
+### Description
+A student prepares for a contest and solves one topic per day. Each topic gives learning points, but the student cannot solve two consecutive topics.
+
+Given topic points in order, determine the maximum total learning points without choosing consecutive topics.
+
+### Input Format
+- First line: `N` (number of topics)
+- Second line: `N` integers representing learning points.
+
+### Output Format
+- Print the maximum learning points.
+
+### Constraints
+- `1 ≤ N ≤ 100000`
+- `1 ≤ Points ≤ 10000`
+
+### Example
+Input:
+```
 6
 5 1 2 10 6 2
-Sample Output
-17
-Explanation
-Choose topics with points 5, 10, and 2. The total learning points are 17. This is the maximum possible without choosing two consecutive topics.
-Example
-Input:
-5
-3 2 7 10 12
-
+```
 Output:
-22
+```
+17
+```
+
+### Solution
+- `MaximumLearningPoints.java`
+
+---
+
+## How to Run
+From the `Assignment - 3` folder, use Java:
+
+```bash
+javac ScholarshipDistribution.java
+java ScholarshipDistribution < input.txt
+
+javac MaximumLearningPoints.java
+java MaximumLearningPoints < input.txt
+```
+
+## Notes
+- Both programs read input using `Scanner(System.in)`.
+- `ScholarshipDistribution.java` uses a greedy sort-based approach.
+- `MaximumLearningPoints.java` uses a basic dynamic programming recurrence.
