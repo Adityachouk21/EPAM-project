@@ -36,5 +36,6 @@ public class EmergencyRouteValidation {
             }
         }
         System.out.println(efficientlyReachableCount);
+        sc.close();
     }
 }
