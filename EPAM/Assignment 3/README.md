@@ -1,3 +1,5 @@
+Assignment 3
+
 Medium Level Problem Statements - Greedy & Dynamic Programming
 Problem 1: Scholarship Distribution (Greedy)
 A college has received a limited number of scholarships for students who participated in a coding competition. Every student has a minimum scholarship amount they are willing to accept. The college wants to award scholarships to as many students as possible without exceeding the available budget.
