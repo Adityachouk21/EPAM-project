@@ -21,13 +21,10 @@ public class MaximumLearningPoints {
 
             int[] dp = new int[N];
 
-            // First topic
             dp[0] = points[0];
 
-            // First two topics
             dp[1] = Math.max(points[0], points[1]);
 
-            // Remaining topics
             for (int i = 2; i < N; i++) {
 
                 dp[i] = Math.max(
